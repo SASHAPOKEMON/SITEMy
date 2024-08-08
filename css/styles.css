@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #6e44ff;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #6e44ff;
+    z-index: 2;
+    position: relative;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    border-radius: 35%;
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 100px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons a.discord:hover img {
+    filter: invert(32%) sepia(89%) saturate(6681%) hue-rotate(202deg) brightness(97%) contrast(101%);
+}
+
+.social-icons a.telegram:hover img {
+    filter: invert(62%) sepia(80%) saturate(1831%) hue-rotate(167deg) brightness(103%) contrast(101%);
+}
+
+.social-icons a.github:hover img {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(258deg) brightness(99%) contrast(104%);
+}
+
+.animation-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dot {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.5);
+    animation: rise 5s infinite, fadeOut 5s infinite;
+}
+
+.dot:nth-child(odd) {
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes fadeOut {
+    0%, 80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
